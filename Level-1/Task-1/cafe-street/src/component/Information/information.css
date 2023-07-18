@@ -1,0 +1,153 @@
+.information {
+  z-index: 1;
+  font-size: 3rem;
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin: 6rem auto;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tagLine {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.tagLine p:first-child {
+  font-weight: 550;
+  /* color: red; */
+  margin: 10px 0;
+}
+.tagLine p i {
+  color: var(--focus);
+}
+
+.tagLine p:nth-child(2) {
+  font-size: 1.7rem;
+}
+
+.coffeeImage {
+  position: relative;
+}
+
+.coffeeImage #cuppuccino {
+  border-radius: 30%;
+}
+
+.coffeeImage p:nth-child(2) {
+  box-shadow: 0px 0px 2px 2px rgb(253, 253, 253);
+  width: 15%;
+  background-color: #fff;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  position: absolute;
+  top: -5%;
+  left: 77%;
+}
+
+.coffeeImage p:nth-child(3) {
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 2px 2px rgb(253, 253, 253);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 60%;
+  left: -5%;
+}
+
+.coffeeImage p:nth-child(4) {
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 2px 2px rgb(253, 253, 253);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 75%;
+  left: 80%;
+}
+
+.coffeeImage p:nth-child(2) img {
+  background-color: #fff;
+  height: 30px;
+}
+
+.ordernow {
+  width: 30%;
+  padding: 7px;
+  border-radius: 20px;
+  background: #2f2105;
+  color: var(--secondary);
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .coffeeImage #cuppuccino {
+    border-radius: 30%;
+    height: 20rem;
+  }
+
+  .information {
+    font-size: 2rem;
+  }
+
+  .ordernow {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .coffeeImage #cuppuccino {
+    border-radius: 30%;
+    height: 15rem;
+  }
+
+  .information {
+    font-size: 1.5rem;
+  }
+
+  .information p:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .ordernow {
+    width: 50%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .coffeeImage #cuppuccino {
+    display: block;
+    width: 90%;
+    height: 20rem;
+    margin: 0 auto;
+  }
+
+  .information {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+
+  .tagLine {
+    width: 100%;
+  }
+
+  .ordernow {
+    width: 40%;
+    font-size: 1rem;
+  }
+}
