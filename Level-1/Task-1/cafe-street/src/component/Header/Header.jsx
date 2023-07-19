@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./header.css";
 
 export default function Header() {
-  const [activeClass, setActiveClass] = useState("aboutus");
+  const [activeClass, setActiveClass] = useState("home");
   const [menu, setMenu] = useState("flase");
   return (
     <>
@@ -25,27 +25,45 @@ export default function Header() {
 
           <div className={menu === "true" ? "mobile-header" : "header-navbar"}>
             <ul>
-              <li
-                className={activeClass === "ourproduct" ? "active" : ""}
-                onClick={() => {
-                  setActiveClass("ourproduct");
-                  setMenu("false");
-                }}
-              >
-                Our Product
+              <li>
+                <a
+                  className={activeClass === "home" ? "active" : ""}
+                  onClick={() => {
+                    setActiveClass("home");
+                    setMenu("false");
+                  }}
+                  href="#information"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  className={activeClass === "ourproduct" ? "active" : ""}
+                  onClick={() => {
+                    setActiveClass("ourproduct");
+                    setMenu("false");
+                  }}
+                  href="#coffeeMenu"
+                >
+                  Our Product
+                </a>
               </li>
 
-              <li
-                className={activeClass === "delivery" ? "active" : ""}
-                onClick={() => {
-                  setActiveClass("delivery");
-                  setMenu("false");
-                }}
-              >
-                Delivery
+              <li>
+                <a
+                  className={activeClass === "delivery" ? "active" : ""}
+                  onClick={() => {
+                    setActiveClass("delivery");
+                    setMenu("false");
+                  }}
+                  href="#delivery"
+                >
+                  Delivery
+                </a>
               </li>
 
-              <li
+              {/* <li
                 className={activeClass === "cart" ? "active" : ""}
                 onClick={() => {
                   setActiveClass("cart");
@@ -54,16 +72,20 @@ export default function Header() {
                 style={{ display: menu === "true" ? "block" : "none" }}
               >
                 Cart
-              </li>
+              </li> */}
 
-              <li
-                className={activeClass === "aboutus" ? "active" : ""}
-                onClick={() => {
-                  setActiveClass("aboutus");
-                  setMenu("false");
-                }}
-              >
-                About us
+              <li>
+                <a
+                  className={activeClass === "aboutus" ? "active" : ""}
+                  onClick={() => {
+                    setActiveClass("aboutus");
+                    setMenu("false");
+                  }}
+                  href="#aboutUs"
+                >
+                  {" "}
+                  About us
+                </a>
               </li>
             </ul>
           </div>

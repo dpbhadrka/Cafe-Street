@@ -5,7 +5,7 @@ import Cappuccino from "./Cappuccino.png";
 export default function Information() {
   return (
     <>
-      <div className="information">
+      <div className="information" id="information">
         <div className="tagLine">
           <p>
             Enjoy your <i>coffee</i> before your activity

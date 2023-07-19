@@ -8,21 +8,12 @@ export default function CoffeeMenu() {
 
   return (
     <>
-      <div className="coffeeMenu">
+      <div className="coffeeMenu" id="coffeeMenu">
         <div className="identity">
           Special <u>Menu</u>
         </div>
 
-        <div className="menuButton">
-          <button
-            onClick={() => {
-              isMenuActive === false ? setMenu(true) : setMenu(false);
-            }}
-          >
-            See Menu
-          </button>
-        </div>
-        <div className={isMenuActive === false ? "coffeeMenuItem" : ""}>
+        <div className="coffeeMenuItem">
           {Menu.map((coffee, index) => (
             <Card
               key={index}

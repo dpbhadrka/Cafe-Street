@@ -6,7 +6,7 @@ import "./delivery.css";
 export default function Delivery() {
   return (
     <>
-      <div className="delivery">
+      <div className="delivery" id="delivery">
         <div>
           <p>
             How to use delivery <u>service</u>

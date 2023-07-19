@@ -8,40 +8,11 @@
 }
 
 .coffeeMenuItem {
-  margin: 2rem auto 0px auto;
+  margin: 2rem auto 1rem auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
   font-size: 2rem;
-}
-
-.menuButton {
-  display: none;
-  width: 45%;
-  box-sizing: border-box;
-  margin: 2rem auto;
-}
-.menuButton button {
-  margin: 0px;
-  font-size: 1.5rem;
-  background-color: #2f2105;
-  color: #fff;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.displayNone {
-  display: none;
-}
-
-@media screen and (max-width: 785px) {
-  .menuButton {
-    display: block;
-  }
-
-  .coffeeMenuItem {
-    display: none;
-  }
 }

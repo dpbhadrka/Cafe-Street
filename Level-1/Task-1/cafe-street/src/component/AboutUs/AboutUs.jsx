@@ -5,7 +5,7 @@ import "./aboutUs.css";
 export default function AboutUs() {
   return (
     <>
-      <div className="aboutUs">
+      <div className="aboutUs" id="aboutUs">
         <div>
           <img width="280" src={AboutImg} alt="" />
         </div>
