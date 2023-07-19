@@ -1,0 +1,20 @@
+.popularNow {
+  font-size: 2rem;
+  width: 85%;
+  margin: 0 auto;
+
+  /* background-color: #ecb159; */
+}
+
+u {
+  /* color: var(--focus); */
+  text-decoration-color: var(--focus);
+}
+
+.popularCoffee {
+  display: flex;
+  margin: 3rem 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}

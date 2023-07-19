@@ -1,4 +1,5 @@
 .information {
+  background-image: url(seeds.png);
   z-index: 1;
   font-size: 3rem;
   /* border: 2px solid red; */
@@ -25,7 +26,8 @@
   color: var(--focus);
 }
 
-.tagLine p:nth-child(2) {
+.tagLine p:nth-child(2),
+.tagLine p:nth-child(3) {
   font-size: 1.7rem;
 }
 
@@ -116,9 +118,12 @@
   .information {
     font-size: 1.5rem;
   }
-
-  .information p:nth-child(2) {
-    font-size: 1rem;
+  .information p:nth-child(1) {
+    font-size: 1.6rem;
+  }
+  .information p:nth-child(2),
+  .information p:nth-child(3) {
+    font-size: 1.3rem;
   }
 
   .ordernow {

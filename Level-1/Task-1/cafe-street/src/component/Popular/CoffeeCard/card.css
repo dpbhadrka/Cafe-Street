@@ -1,0 +1,41 @@
+.card {
+  width: 300px;
+  /* background-color: #ecb159; */
+  padding: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+.coffeeInfo {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.coffeeOption {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.coffeeType {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.coffeeType button {
+  width: 50%;
+  border: 1px solid var(--focus);
+  font-size: 1.1rem;
+  border-radius: 10px;
+}

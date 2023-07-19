@@ -1,7 +1,6 @@
 import React from "react";
 import "./information.css";
 import Cappuccino from "./Cappuccino.png";
-import Star from "@mui/icons-material/StarOutlined";
 
 export default function Information() {
   return (
@@ -14,6 +13,10 @@ export default function Information() {
           <p>
             Boost your productivity and build your mood with a glass of coffee
             in the morning.
+          </p>
+          <p>
+            "Awaken Your Senses with Every Sip: Indulge in the Richness of
+            Coffee."
           </p>
 
           <button className="ordernow">Order now</button>
