@@ -115,4 +115,8 @@
   .header-menubutton {
     display: block;
   }
+
+  .header-container {
+    margin: 0;
+  }
 }
