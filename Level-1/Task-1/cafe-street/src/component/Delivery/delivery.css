@@ -1,9 +1,13 @@
 .delivery {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 90%;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
   gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .delivery div:first-child {

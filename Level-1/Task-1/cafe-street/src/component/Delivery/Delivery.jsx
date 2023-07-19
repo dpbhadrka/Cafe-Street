@@ -19,7 +19,7 @@ export default function Delivery() {
             </div>
             <div>
               <p>choose your coffee</p>
-              <p>there are 20+ coffee for you</p>
+              <p>20+ coffee for you</p>
             </div>
           </div>
           <div>
