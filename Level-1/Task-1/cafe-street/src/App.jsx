@@ -5,6 +5,7 @@ import Popular from "./component/Popular/Popular";
 import Delivery from "./component/Delivery/Delivery";
 import AboutUs from "./component/AboutUs/AboutUs";
 import CoffeeMenu from "./component/CoffeeMenu/CoffeeMenu";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Delivery />
         <CoffeeMenu />
         <AboutUs />
+        <Footer />
       </div>
     </>
   );

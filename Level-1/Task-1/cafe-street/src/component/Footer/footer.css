@@ -1,0 +1,21 @@
+.footer {
+  padding: 1rem;
+  font-size: 1.5rem;
+  /* text-align: center; */
+  border-radius: 20px;
+  background-color: #1c0f07c9;
+}
+
+.footer p:first-child {
+  font-weight: 550;
+  color: rgb(50, 190, 190);
+}
+.footer p,
+.footer i {
+  background-color: transparent;
+}
+
+.footer p {
+  margin: 15px;
+  color: var(--secondary);
+}
