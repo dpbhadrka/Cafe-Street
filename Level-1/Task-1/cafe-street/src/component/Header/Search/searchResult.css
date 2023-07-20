@@ -1,0 +1,13 @@
+.searchResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.displayNone {
+  display: none;
+}
