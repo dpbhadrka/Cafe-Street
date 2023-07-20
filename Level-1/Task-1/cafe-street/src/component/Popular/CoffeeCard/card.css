@@ -1,5 +1,5 @@
 .card {
-  width: 300px;
+  width: 280px;
 }
 
 .card-container {
@@ -16,7 +16,7 @@
 
 .cardImage img {
   width: 100%;
-  height: 30vh;
+  height: 17rem;
   border-radius: 20px;
 }
 

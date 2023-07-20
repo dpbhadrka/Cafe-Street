@@ -11,6 +11,7 @@ import SearchResult from "./component/Header/Search/SearchResult";
 function App() {
   const [searchedItem, setSearchedItem] = useState([]);
   const [search, setSearch] = useState("");
+  const [items, setItems] = useState([]);
 
   const searchMedium = (filteredItems, searchQuery) => {
     console.log("Working");
@@ -18,17 +19,30 @@ function App() {
     setSearchedItem(filteredItems);
     setSearch(searchQuery);
   };
+
+  const takeCoffeeItem = (name, price, path, type) => {
+    console.log("coffeeitem success");
+    const newItem = {
+      coffeeName: name,
+      coffeePrice: price,
+      coffeeImagePath: path,
+      coffeeType: type,
+    };
+    setItems([...items, newItem]);
+  };
+
   return (
     <>
       <div>
-        <Header searchMedium={searchMedium} />
+        <Header searchMedium={searchMedium} items={items} />
         {searchedItem.length != 0 ? (
           <SearchResult searchedItem={searchedItem} />
         ) : (
           ""
         )}
+
         <Information />
-        <Popular />
+        <Popular takeCoffeeItem={takeCoffeeItem} />
         <Delivery />
         <CoffeeMenu />
         <AboutUs />

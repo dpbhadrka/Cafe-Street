@@ -3,9 +3,17 @@ import "./card.css";
 
 export default function Card(props) {
   const [isActive, setActive] = useState("Hot");
+
+  const addToCart = () => {
+    console.log(props.name);
+    console.log(props.price);
+    alert("Your " + props.name + " is added to cart.");
+
+    props.takeCoffeeItem(props.name, props.price, props.path, isActive);
+  };
   return (
     <>
-      {console.log("this is card")}
+      {/* {console.log("this is card")} */}
       <div className="card">
         <div className="card-container">
           <div className="cardImage">
@@ -38,6 +46,7 @@ export default function Card(props) {
               height="35"
               src="https://img.icons8.com/external-obivous-color-kerismaker/48/external-cart-ecommerce-color-obivous-color-kerismaker.png"
               alt="cart"
+              onClick={addToCart}
             />
           </div>
         </div>

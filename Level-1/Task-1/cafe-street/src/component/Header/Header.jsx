@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./header.css";
 import Menu from "../../assets/Data/Menu";
+import Cart from "../Cart1/Cart";
 
 export default function Header(props) {
   const [activeClass, setActiveClass] = useState("home");
   const [menu, setMenu] = useState("flase");
+  const [isCartVisible, setCartVisibility] = useState(false);
 
   // Search Functionality
   const [searchQuery, setSearchQuery] = useState("");
-  // const [filteredItems, setFilteredItems] = useState(Menu);
+
+  const [list, setList] = useState([]);
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -20,6 +23,7 @@ export default function Header(props) {
 
       // Set the filtered items in the state
       // setFilteredItems(filteredResults);
+      // searchMedium is in app.jsx
       props.searchMedium(filteredResults, searchQuery);
     }
   };
@@ -27,6 +31,8 @@ export default function Header(props) {
   return (
     <>
       <header>
+        {/* {console.log(props.items)} */}
+        {/* {console.log(list)} */}
         <div className="header-container">
           <div className="logoTitle">
             <img
@@ -131,16 +137,23 @@ export default function Header(props) {
 
               {/* <Search /> */}
             </div>
-            {/* <div className="cart">
+            <div
+              className="cart"
+              onClick={() => {
+                isCartVisible === false
+                  ? setCartVisibility(true)
+                  : setCartVisibility(false);
+              }}
+            >
               <img
                 width="35"
                 height="35"
                 src="https://img.icons8.com/external-obivous-color-kerismaker/48/external-cart-ecommerce-color-obivous-color-kerismaker.png"
                 alt="cart"
               />
-            </div> */}
+            </div>
           </div>
-          {/* {searchQuery.trim() != "" ? <Search query={searchQuery} /> : ""} */}
+
           <div className="header-menubutton">
             <img
               style={{ display: menu === "true" ? "none" : "block" }}
@@ -166,6 +179,40 @@ export default function Header(props) {
           </div>
         </div>
       </header>
+      {isCartVisible ? (
+        <div className="cartMenu">
+          <div
+            className="closeCart"
+            onClick={() => {
+              setCartVisibility(false);
+            }}
+          >
+            <p>
+              Your <u>Cart</u>
+            </p>
+            <button>Close</button>
+          </div>
+          {props.items.length != 0 ? (
+            <div className="cartItemList">
+              {props.items.map((item, index) => {
+                return (
+                  <Cart
+                    key={index}
+                    name={item.coffeeName}
+                    price={item.coffeePrice}
+                    path={item.coffeeImagePath}
+                    type={item.coffeeType}
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div className="emptyCart">Cart is Empty.</div>
+          )}
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }
