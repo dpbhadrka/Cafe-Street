@@ -31,10 +31,25 @@ function App() {
     setItems([...items, newItem]);
   };
 
+  const removeItemFromCart = (name) => {
+    // Create a new array without the clicked element using Array.filter()
+    // const updatedData = items.filter((item) => item.name !== name);
+    const updatedData = items.filter((item) => item.coffeeName != name);
+    // Update the state with the new array
+    console.log(name);
+    setItems(updatedData);
+    console.log(updatedData);
+    // console.log("updatedData");
+  };
+
   return (
     <>
       <div>
-        <Header searchMedium={searchMedium} items={items} />
+        <Header
+          searchMedium={searchMedium}
+          items={items}
+          removeItem={removeItemFromCart}
+        />
         {searchedItem.length != 0 ? (
           <SearchResult searchedItem={searchedItem} />
         ) : (

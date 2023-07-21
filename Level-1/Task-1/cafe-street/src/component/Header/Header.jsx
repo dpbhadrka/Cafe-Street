@@ -217,6 +217,7 @@ export default function Header(props) {
                     price={item.coffeePrice}
                     path={item.coffeeImagePath}
                     type={item.coffeeType}
+                    removeItemFromCart={props.removeItem}
                   />
                 );
               })}

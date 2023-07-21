@@ -14,7 +14,9 @@ export default function Cart(props) {
           height="35"
           src="https://img.icons8.com/1756af/glyph-neue/0/delete-sign.png"
           alt="delete"
-          onClick={() => SetRemoveItem(true)}
+          onClick={() => {
+            props.removeItemFromCart(props.name);
+          }}
         />
         <img src={props.path} alt="xyx" />
         <div>
