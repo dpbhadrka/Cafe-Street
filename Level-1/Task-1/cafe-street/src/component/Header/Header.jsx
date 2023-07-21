@@ -89,16 +89,19 @@ export default function Header(props) {
                 </a>
               </li>
 
-              {/* <li
+              <li
                 className={activeClass === "cart" ? "active" : ""}
                 onClick={() => {
                   setActiveClass("cart");
                   setMenu("false");
+                  isCartVisible === false
+                    ? setCartVisibility(true)
+                    : setCartVisibility(false);
                 }}
                 style={{ display: menu === "true" ? "block" : "none" }}
               >
                 Cart
-              </li> */}
+              </li>
 
               <li>
                 <a
@@ -185,12 +188,24 @@ export default function Header(props) {
             className="closeCart"
             onClick={() => {
               setCartVisibility(false);
+              setActiveClass("home");
             }}
           >
             <p>
               Your <u>Cart</u>
             </p>
-            <button>Close</button>
+            <button>
+              {activeClass === "cart" ? (
+                <img
+                  width="35"
+                  height="35"
+                  src="https://img.icons8.com/glyph-neue/64/delete-sign.png"
+                  alt="delete-sign"
+                />
+              ) : (
+                "Close"
+              )}
+            </button>
           </div>
           {props.items.length != 0 ? (
             <div className="cartItemList">

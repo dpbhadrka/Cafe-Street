@@ -104,7 +104,7 @@
 }
 
 .cartMenu {
-  margin: 1rem 4rem;
+  margin: 1rem 2rem;
   border-radius: 20px;
   border: 2px solid #2f2105;
   padding: 10px 10px 50px 20px;
@@ -130,8 +130,8 @@
 }
 
 .cartMenu .closeCart button {
-  width: 10%;
-  padding: 5px;
+  /* width: 10%; */
+  /* padding: 5px; */
   border-radius: 10px;
   font-size: 1.4rem;
 }
