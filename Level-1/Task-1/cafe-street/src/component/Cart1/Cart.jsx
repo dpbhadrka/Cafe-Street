@@ -15,14 +15,14 @@ export default function Cart(props) {
           src="https://img.icons8.com/1756af/glyph-neue/0/delete-sign.png"
           alt="delete"
           onClick={() => {
-            props.removeItemFromCart(props.name);
+            props.removeItemFromCart(props.name, props.price);
           }}
         />
         <img src={props.path} alt="xyx" />
         <div>
           <p>{props.name}</p>
           <p>{props.type}</p>
-          <p>{props.price}</p>
+          <p>{props.price}K</p>
         </div>
       </div>
     </>

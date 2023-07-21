@@ -7,11 +7,11 @@ export default function Header(props) {
   const [activeClass, setActiveClass] = useState("home");
   const [menu, setMenu] = useState("flase");
   const [isCartVisible, setCartVisibility] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+  let grandTotal = 0;
 
   // Search Functionality
   const [searchQuery, setSearchQuery] = useState("");
-
-  const [list, setList] = useState([]);
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -192,7 +192,7 @@ export default function Header(props) {
             }}
           >
             <p>
-              Your <u>Cart</u>
+              Your <u>Cart</u> :<br />
             </p>
             <button>
               {activeClass === "cart" ? (
@@ -207,6 +207,8 @@ export default function Header(props) {
               )}
             </button>
           </div>
+          <p>Amount: {props.totalPrice}k</p>
+
           {props.items.length != 0 ? (
             <div className="cartItemList">
               {props.items.map((item, index) => {

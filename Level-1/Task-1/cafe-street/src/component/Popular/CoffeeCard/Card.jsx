@@ -21,7 +21,7 @@ export default function Card(props) {
           </div>
           <div className="coffeeInfo">
             <p>{props.name}</p>
-            <p>{props.price}</p>
+            <p>{props.price}k</p>
           </div>
           <div className="coffeeOption">
             <div className="coffeeType">

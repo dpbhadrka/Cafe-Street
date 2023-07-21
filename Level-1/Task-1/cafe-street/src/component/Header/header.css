@@ -160,4 +160,12 @@
   .header-container {
     margin: 0;
   }
+  .emptyCart,
+  .cartMenu p {
+    font-size: 1.7rem;
+  }
+
+  .closeCart button {
+    all: unset;
+  }
 }

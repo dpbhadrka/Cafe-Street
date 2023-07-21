@@ -3,9 +3,7 @@ import Card from "../Popular/CoffeeCard/Card";
 import Menu from "../../assets/Data/Menu";
 import "./coffeeMenu.css";
 
-export default function CoffeeMenu() {
-  const [isMenuActive, setMenu] = useState(false);
-
+export default function CoffeeMenu(props) {
   return (
     <>
       <div className="coffeeMenu" id="coffeeMenu">
@@ -16,6 +14,7 @@ export default function CoffeeMenu() {
         <div className="coffeeMenuItem">
           {Menu.map((coffee, index) => (
             <Card
+              takeCoffeeItem={props.takeCoffeeItem}
               key={index}
               name={coffee.name}
               price={coffee.price}
