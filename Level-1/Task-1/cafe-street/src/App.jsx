@@ -51,9 +51,13 @@ function App() {
           items={items}
           removeItem={removeItemFromCart}
           totalPrice={totalPrice}
+          takeCoffeeItem={takeCoffeeItem}
         />
         {searchedItem.length != 0 ? (
-          <SearchResult searchedItem={searchedItem} />
+          <SearchResult
+            searchedItem={searchedItem}
+            takeCoffeeItem={takeCoffeeItem}
+          />
         ) : (
           ""
         )}

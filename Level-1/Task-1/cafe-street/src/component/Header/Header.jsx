@@ -7,15 +7,14 @@ export default function Header(props) {
   const [activeClass, setActiveClass] = useState("home");
   const [menu, setMenu] = useState("flase");
   const [isCartVisible, setCartVisibility] = useState(false);
-  const [totalPrice, setTotalPrice] = useState(0);
-  let grandTotal = 0;
 
   // Search Functionality
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    if (searchQuery.trim() != "") {
+    if (query) {
+      console.log("Query: ", query);
       // Filter the items based on the search query
       const filteredResults = Menu.filter((item) =>
         item.name.toLowerCase().includes(query.toLowerCase())
@@ -24,7 +23,10 @@ export default function Header(props) {
       // Set the filtered items in the state
       // setFilteredItems(filteredResults);
       // searchMedium is in app.jsx
-      props.searchMedium(filteredResults, searchQuery);
+      props.searchMedium(filteredResults, query);
+    } else {
+      console.log("In else condition");
+      props.searchMedium([], query);
     }
   };
 
@@ -133,7 +135,6 @@ export default function Header(props) {
                 id="header-search"
                 placeholder="Cappuccino"
                 onChange={(e) => {
-                  console.log(e.target.value);
                   handleSearch(e.target.value);
                 }}
               />
@@ -219,6 +220,7 @@ export default function Header(props) {
                     price={item.coffeePrice}
                     path={item.coffeeImagePath}
                     type={item.coffeeType}
+                    takeCoffeeItem={props.takeCoffeeItem}
                     removeItemFromCart={props.removeItem}
                   />
                 );

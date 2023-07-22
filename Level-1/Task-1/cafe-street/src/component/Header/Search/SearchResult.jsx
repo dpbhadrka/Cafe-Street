@@ -17,6 +17,7 @@ const Search = (props) => {
             name={coffee.name}
             price={coffee.price}
             path={coffee.path}
+            takeCoffeeItem={props.takeCoffeeItem}
           />
         ))}
       </div>
