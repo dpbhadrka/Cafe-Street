@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../Popular/CoffeeCard/Card";
-import Menu from "../../assets/Data/Menu";
+import Menu from "../../Data/Menu";
 import "./coffeeMenu.css";
 
 export default function CoffeeMenu(props) {

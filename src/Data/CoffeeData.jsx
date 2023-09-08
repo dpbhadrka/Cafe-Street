@@ -2,17 +2,17 @@ const popularCoffee = [
   {
     name: "Espresso",
     price: 5,
-    path: "/src/assets/images/Espresso.png",
+    path: "/src/images/Espresso.png",
   },
   {
     name: "Hazelnut Latte",
     price: 6,
-    path: "/src/assets/images/Hazelnut-latte.png",
+    path: "/src/images/Hazelnut-latte.png",
   },
   {
     name: "Vanilla Latte",
     price: 5.5,
-    path: "/src/assets/images/Vanilla-latte.png",
+    path: "/src/images/Vanilla-latte.png",
   },
 ];
 
