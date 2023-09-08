@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
-import Menu from "../../Data/Menu";
+import Menu from "../../../assets/Data/Menu";
 import Cart from "../Cart1/Cart";
 
 export default function Header(props) {
